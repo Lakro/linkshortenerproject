@@ -29,6 +29,7 @@ This document provides comprehensive coding standards and guidelines for LLM age
 - **Authentication**: Clerk
 - **UI**: shadcn/ui (New York style) + Tailwind CSS v4
 - **Icons**: Lucide React
+- **Fonts**: Geist (sans-serif) and Geist Mono (monospace) - loaded locally via `geist` package
 
 ## Documentation Structure
 
