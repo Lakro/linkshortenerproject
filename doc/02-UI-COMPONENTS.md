@@ -41,6 +41,34 @@ npx shadcn@latest add input
 npx shadcn@latest add table
 ```
 
+### Typography
+
+The project uses the **Geist** font family, loaded locally from the `geist` npm package:
+
+- **Geist Sans**: Main sans-serif font for all body text, headings, and UI elements
+- **Geist Mono**: Monospace font for code blocks, technical content, and fixed-width text
+
+The fonts are configured in `app/layout.tsx` and applied globally via CSS variables:
+```typescript
+import { GeistSans } from "geist/font/sans";
+import { GeistMono } from "geist/font/mono";
+
+// Applied to body element
+className={`${GeistSans.variable} ${GeistMono.variable} antialiased`}
+```
+
+CSS variables in `globals.css`:
+```css
+--font-sans: var(--font-geist-sans);
+--font-mono: var(--font-geist-mono);
+```
+
+Typography classes available:
+- `font-sans` - Applies Geist Sans (default)
+- `font-mono` - Applies Geist Mono for code/technical content
+- `font-bold`, `font-semibold`, `font-medium` - Font weights
+- `text-xs`, `text-sm`, `text-base`, `text-lg`, etc. - Font sizes
+
 ## Component Categories
 
 ### Forms
