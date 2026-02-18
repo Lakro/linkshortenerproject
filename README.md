@@ -1,3 +1,13 @@
+# TRAINING GITHUB COPILOT ACTIONS
+
+This is aa training repository for GitHub Copilot Actions. It is based on the default Next.js template, which provides a simple starting point for building a Next.js application.
+
+Here is the generated README.md file for the project:
+
+
+# README
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
