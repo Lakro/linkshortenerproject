@@ -1,5 +1,24 @@
 # Agent Instructions - Link Shortener Project
 
+## 🚨 CRITICAL - STOP AND READ THIS FIRST 🚨
+
+### ⛔ MANDATORY: READ DOCUMENTATION BEFORE ANY CODE GENERATION ⛔
+
+**YOU MUST READ THE RELEVANT DOCUMENTATION FILES IN `/doc/` BEFORE WRITING OR UPDATING ANY CODE.**
+
+**THIS IS A BLOCKING REQUIREMENT. FAILURE TO COMPLY WILL RESULT IN INCORRECT CODE.**
+
+### ⚠️ IMPORTANT RULES:
+1. ✋ **STOP** - Do NOT write code immediately
+2. 📖 **READ** - Read the ENTIRE relevant documentation file in `/doc/`
+3. 🧠 **UNDERSTAND** - Comprehend the patterns and rules
+4. ✅ **THEN** - Write code following those exact patterns
+
+**DO NOT SKIP READING THE DOCS.**  
+**DO NOT ASSUME YOU KNOW THE PATTERNS.**  
+**DO NOT GENERATE CODE BASED ON GENERAL KNOWLEDGE.**  
+**ALWAYS READ THE PROJECT-SPECIFIC INSTRUCTIONS FIRST.**
+
 ## Overview
 This document provides comprehensive coding standards and guidelines for LLM agents working on this Link Shortener project. These instructions ensure consistent, high-quality code that follows industry best practices.
 
@@ -13,76 +32,49 @@ This document provides comprehensive coding standards and guidelines for LLM age
 
 ## Documentation Structure
 
-All detailed agent instructions are organized in the `/doc` directory:
+### 🔴 CRITICAL WORKFLOW - FOLLOW THIS EXACTLY 🔴
 
-### 📖 Core Documentation
+**Before writing ANY code, you MUST:**
 
-1. **[00-OVERVIEW.md](doc/00-OVERVIEW.md)**
-   - Project purpose and goals
-   - Complete tech stack breakdown
-   - Quick start commands
-   - Environment setup
+1. **IDENTIFY** - Determine which aspect of the project you're working on (auth, UI, database, etc.)
+2. **READ** - Open and read the ENTIRE relevant documentation file in `/doc/`
+3. **UNDERSTAND** - Study the patterns, examples, and rules completely
+4. **IMPLEMENT** - ONLY THEN write code following those exact patterns
 
-2. **[01-ARCHITECTURE.md](doc/01-ARCHITECTURE.md)**
-   - Folder structure and organization
-   - Next.js App Router conventions
-   - Component organization patterns
-   - Path aliases and imports
-   - Naming conventions
+### 🚫 NEVER DO THIS:
+- ❌ Generate code based on general Next.js knowledge
+- ❌ Assume you know the project patterns
+- ❌ Skip reading the documentation files
+- ❌ Skim or partially read the docs
+- ❌ Write code first and check docs later
 
-3. **[02-TYPESCRIPT.md](doc/02-TYPESCRIPT.md)**
-   - TypeScript configuration (strict mode)
-   - Type definition patterns
-   - Type guards and utility types
-   - React-specific types
-   - Error handling with types
-   - Common pitfalls to avoid
+### ✅ ALWAYS DO THIS:
+- ✅ Read the COMPLETE relevant documentation file BEFORE writing ANY code
+- ✅ Follow the exact patterns shown in the documentation
+- ✅ Reference the examples in the docs
+- ✅ Verify your code matches the documented patterns
 
-4. **[03-REACT-NEXTJS.md](doc/03-REACT-NEXTJS.md)**
-   - Server vs Client Components
-   - Server Actions best practices
-   - Data fetching patterns
-   - Metadata and SEO
-   - Performance optimization
-   - Error boundaries and loading states
+---
 
-5. **[04-STYLING.md](doc/04-STYLING.md)**
-   - Tailwind CSS v4 conventions
-   - `cn()` utility usage
-   - Responsive design patterns
-   - Dark mode implementation
-   - Layout patterns (Flexbox, Grid)
-   - Color system and spacing
+### 📚 Available Documentation Files
 
-6. **[05-DATABASE.md](doc/05-DATABASE.md)**
-   - Drizzle ORM schema definitions
-   - Query patterns and best practices
-   - Relations and joins
-   - Migrations workflow
-   - Type safety with database
-   - Performance optimization
+All detailed agent instructions are organized in the `/doc` directory. Each file contains specific guidelines and examples:
 
-7. **[06-COMPONENTS.md](doc/06-COMPONENTS.md)**
-   - shadcn/ui component usage
-   - Custom component creation
-   - Component composition patterns
-   - Lucide React icons
-   - Accessibility guidelines
-   - Component best practices
+- **[01-AUTHENTICATION.md](doc/01-AUTHENTICATION.md)** - Clerk authentication, route protection, and user management  
+  → **MUST READ BEFORE** any auth code, protected routes, or user management
+  
+- **[02-UI-COMPONENTS.md](doc/02-UI-COMPONENTS.md)** - shadcn/ui components, forms, tables, cards, and layouts  
+  → **MUST READ BEFORE** any UI components, forms, or styling code
 
-8. **[07-GIT.md](doc/07-GIT.md)**
-   - Branch naming conventions
-   - Commit message format (Conventional Commits)
-   - Pull request guidelines
-   - Git workflow
-   - Security best practices
+---
 
-9. **[08-TESTING.md](doc/08-TESTING.md)**
-   - Testing strategy and philosophy
-   - Unit, integration, and E2E testing
-   - Code quality tools (ESLint, TypeScript)
-   - Code review checklist
-   - Debugging techniques
+### 🎯 How to Determine Which File to Read
+
+**Working on Authentication/Users?** → Read `01-AUTHENTICATION.md`  
+**Working on UI/Components/Forms?** → Read `02-UI-COMPONENTS.md`  
+**Working on Database?** → Read database documentation (when available)  
+**Not sure?** → Read ALL relevant files, better safe than sorry!
+
 
 ## Quick Reference
 
@@ -196,6 +188,14 @@ export async function createLink(formData: FormData) {
 
 ## When Building Features
 
+### ⚠️ STEP 0: READ THE DOCUMENTATION FIRST
+**Before doing ANY of the steps below, READ the relevant `/doc/` files!**
+
+Do NOT proceed to step 1 until you have:
+- ✅ Identified which documentation files are relevant
+- ✅ Read those files completely from start to finish
+- ✅ Understood the patterns and examples
+
 ### 1. Plan the Architecture
 - Determine if components should be Server or Client Components
 - Design the database schema and relations
@@ -238,34 +238,17 @@ export async function createLink(formData: FormData) {
 
 ## Getting Help
 
-### For Architecture Questions
-→ See [01-ARCHITECTURE.md](doc/01-ARCHITECTURE.md)
+### For Authentication & User Management
+→ See [01-AUTHENTICATION.md](doc/01-AUTHENTICATION.md)
 
-### For TypeScript Issues
-→ See [02-TYPESCRIPT.md](doc/02-TYPESCRIPT.md)
-
-### For React/Next.js Patterns
-→ See [03-REACT-NEXTJS.md](doc/03-REACT-NEXTJS.md)
-
-### For Styling Questions
-→ See [04-STYLING.md](doc/04-STYLING.md)
-
-### For Database Operations
-→ See [05-DATABASE.md](doc/05-DATABASE.md)
-
-### For Component Development
-→ See [06-COMPONENTS.md](doc/06-COMPONENTS.md)
-
-### For Git/Version Control
-→ See [07-GIT.md](doc/07-GIT.md)
-
-### For Testing
-→ See [08-TESTING.md](doc/08-TESTING.md)
+### For UI Components, Forms, Tables & Layouts
+→ See [02-UI-COMPONENTS.md](doc/02-UI-COMPONENTS.md)
 
 ## Checklist for New Features
 
 Use this checklist when implementing new features:
 
+- [ ] **🔴 READ RELEVANT DOCUMENTATION in `/doc/` FIRST** (BLOCKING - DO NOT PROCEED WITHOUT THIS)
 - [ ] Feature planned according to architecture guidelines
 - [ ] TypeScript types defined (no `any` types)
 - [ ] Server/Client components chosen appropriately
@@ -285,11 +268,32 @@ Use this checklist when implementing new features:
 
 ## Remember
 
+> **📖 READ DOCS FIRST - ALWAYS**: Before writing ANY code, read the complete relevant documentation file in `/doc/`. This is not optional. This is not negotiable. This is MANDATORY.
+
 > **Quality over Speed**: Take time to write clean, maintainable, type-safe code that follows these guidelines. Future developers (and future you) will thank you.
 
-> **When in Doubt**: Refer to the detailed documentation in `/doc/` directory. Each file contains comprehensive examples and best practices.
+> **When in Doubt**: Refer to the detailed documentation in `/doc/` directory. Each file contains comprehensive examples and best practices. When you're certain, still refer to them to confirm.
 
 > **Consistency is Key**: Follow existing patterns in the codebase. When adding new patterns, document them for others.
+
+---
+
+## 🔴 FINAL REMINDER 🔴
+
+**If you take away ONE thing from this document, let it be this:**
+
+### NEVER GENERATE CODE WITHOUT READING THE RELEVANT `/doc/` FILES FIRST
+
+The documentation files contain:
+- ✅ Project-specific patterns and conventions
+- ✅ Exact code examples to follow
+- ✅ Common pitfalls to avoid
+- ✅ Best practices for this specific project
+
+**Your general knowledge of Next.js, React, or TypeScript is NOT enough.**  
+**This project has SPECIFIC patterns that you MUST follow.**  
+**Those patterns are documented in `/doc/`.**  
+**READ THEM FIRST. EVERY TIME.**
 
 ---
 
