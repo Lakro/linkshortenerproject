@@ -117,12 +117,12 @@ export default async function Home() {
       </section>
 
       {/* Attention Section - Separator */}
-      <section className="border-t border-border bg-muted/50 px-4 py-12">
+      <section className="border-t border-border bg-muted px-4 py-12">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-2">
             Trusted by thousands
           </p>
-          <p className="text-lg md:text-xl font-semibold">
+          <p className="text-lg md:text-xl text-muted-foreground">
             Start shortening your links today and track every click with powerful analytics
           </p>
         </div>
