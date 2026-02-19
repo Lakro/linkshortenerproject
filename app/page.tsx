@@ -100,25 +100,31 @@ export default async function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="border-t border-border bg-muted/30 px-4 py-16 md:py-24">
-        <div className="mx-auto max-w-4xl">
-          <Card className="border-2 shadow-lg">
-            <CardHeader className="text-center pb-4">
-              <CardTitle className="text-3xl font-bold tracking-tight md:text-4xl">
-                Ready to get started?
-              </CardTitle>
-              <CardDescription className="text-lg mt-4">
-                Join thousands of users who trust our platform to manage their links.
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="text-center pb-8">
-              <SignUpButton mode="modal">
-                <Button size="lg">
-                  Create Your Account
-                </Button>
-              </SignUpButton>
-            </CardContent>
-          </Card>
+      <section className="border-t border-border px-4 py-16 md:py-24">
+        <div className="mx-auto max-w-4xl text-center">
+          <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">
+            Ready to get started?
+          </h2>
+          <p className="mb-8 text-lg text-muted-foreground">
+            Join thousands of users who trust our platform to manage their links.
+          </p>
+          <SignUpButton mode="modal">
+            <Button size="lg">
+              Create Your Account
+            </Button>
+          </SignUpButton>
+        </div>
+      </section>
+
+      {/* Attention Section - Separator */}
+      <section className="border-t border-border bg-muted/50 px-4 py-12">
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-2">
+            Trusted by thousands
+          </p>
+          <p className="text-lg md:text-xl font-semibold">
+            Start shortening your links today and track every click with powerful analytics
+          </p>
         </div>
       </section>
     </div>
