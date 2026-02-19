@@ -47,8 +47,9 @@ export default async function Home() {
       <section className="border-t border-border bg-muted/50 px-4 py-16 md:py-24">
         <div className="mx-auto max-w-6xl">
           <div className="mb-12 text-center">
+            <div className="mb-4 text-5xl">🔗</div>
             <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">
-              🔗 Everything you need to manage links
+              Everything you need to manage links
             </h2>
             <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
               Powerful features designed to make link management simple and effective.
