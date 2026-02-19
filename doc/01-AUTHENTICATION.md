@@ -368,42 +368,57 @@ export default async function DashboardPage() {
 
 ## Styling & Theming
 
-### Customizing Clerk Components
-Match Clerk's appearance to your app's design:
+### shadcn Dark Theme Integration
+This project uses Clerk's official dark theme with shadcn design tokens for consistent styling:
 
 ```typescript
-import { SignIn } from '@clerk/nextjs'
+// app/layout.tsx
+import { ClerkProvider } from '@clerk/nextjs'
+import { dark } from '@clerk/themes'
 
-<SignIn 
-  appearance={{
-    layout: {
-      socialButtonsPlacement: 'bottom',
-      socialButtonsVariant: 'iconButton',
-    },
-    variables: {
-      colorPrimary: '#3b82f6', // blue-500
-      colorBackground: '#ffffff',
-      colorText: '#0a0a0a',
-      borderRadius: '0.5rem',
-    },
-    elements: {
-      card: 'shadow-xl border border-neutral-200',
-      formButtonPrimary: 'bg-blue-600 hover:bg-blue-700',
-      footerActionLink: 'text-blue-600 hover:text-blue-700',
-    }
-  }}
-/>
-```
-
-### Dark Mode Support
-```typescript
 <ClerkProvider
   appearance={{
-    baseTheme: [/* light theme */, /* dark theme */],
+    baseTheme: dark,
+    variables: {
+      colorPrimary: "hsl(var(--primary))",
+      colorBackground: "hsl(var(--background))",
+      colorInputBackground: "hsl(var(--input))",
+      colorInputText: "hsl(var(--foreground))",
+      colorText: "hsl(var(--foreground))",
+      colorTextSecondary: "hsl(var(--muted-foreground))",
+      borderRadius: "var(--radius)",
+    },
   }}
 >
   {children}
 </ClerkProvider>
+```
+
+### Customizing Individual Components
+Apply the same theme configuration to individual Clerk components:
+
+```typescript
+import { SignIn } from '@clerk/nextjs'
+import { dark } from '@clerk/themes'
+
+<SignIn 
+  appearance={{
+    baseTheme: dark,
+    variables: {
+      colorPrimary: "hsl(var(--primary))",
+      colorBackground: "hsl(var(--background))",
+      colorInputBackground: "hsl(var(--input))",
+      colorInputText: "hsl(var(--foreground))",
+      colorText: "hsl(var(--foreground))",
+      colorTextSecondary: "hsl(var(--muted-foreground))",
+      borderRadius: "var(--radius)",
+    },
+    elements: {
+      rootBox: "mx-auto",
+      card: "shadow-xl border border-border bg-card"
+    }
+  }}
+/>
 ```
 
 ## Best Practices
