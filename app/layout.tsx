@@ -11,6 +11,7 @@ import {
 } from "@clerk/nextjs";
 import { dark } from "@clerk/themes";
 import { Button } from "@/components/ui/button";
+import { Footer } from "@/components/footer";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -61,6 +62,7 @@ export default function RootLayout({
             </nav>
           </header>
           {children}
+          <Footer />
         </body>
       </html>
     </ClerkProvider>
