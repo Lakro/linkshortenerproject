@@ -9,6 +9,7 @@ import {
   SignedOut,
   UserButton,
 } from "@clerk/nextjs";
+import { dark } from "@clerk/themes";
 import { Button } from "@/components/ui/button";
 import "./globals.css";
 
@@ -23,7 +24,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
+    <ClerkProvider
+      appearance={{
+        baseTheme: dark,
+        variables: {
+          colorPrimary: "hsl(var(--primary))",
+          colorBackground: "hsl(var(--background))",
+          colorInputBackground: "hsl(var(--input))",
+          colorInputText: "hsl(var(--foreground))",
+          colorText: "hsl(var(--foreground))",
+          colorTextSecondary: "hsl(var(--muted-foreground))",
+          borderRadius: "var(--radius)",
+        },
+      }}
+    >
       <html lang="en" className="dark">
         <body
           className={`${GeistSans.variable} ${GeistMono.variable} antialiased`}
