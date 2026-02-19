@@ -1,6 +1,6 @@
 import { auth } from '@clerk/nextjs/server'
 import { redirect } from 'next/navigation'
-import { SignInButton, SignUpButton } from '@clerk/nextjs'
+import { SignUpButton } from '@clerk/nextjs'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Link2, BarChart3, Shield, Zap } from 'lucide-react'
@@ -39,11 +39,6 @@ export default async function Home() {
                 Get Started for Free
               </Button>
             </SignUpButton>
-            <SignInButton mode="modal">
-              <Button variant="outline" size="lg" className="w-full sm:w-auto">
-                Sign In
-              </Button>
-            </SignInButton>
           </div>
         </div>
       </section>
