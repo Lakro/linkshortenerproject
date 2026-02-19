@@ -48,7 +48,7 @@ export default async function Home() {
         <div className="mx-auto max-w-6xl">
           <div className="mb-12 text-center">
             <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">
-              Everything you need to manage links
+              🔗 Everything you need to manage links
             </h2>
             <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
               Powerful features designed to make link management simple and effective.
