@@ -28,12 +28,12 @@ export default function RootLayout({
       appearance={{
         baseTheme: dark,
         variables: {
-          colorPrimary: "hsl(var(--primary))",
-          colorBackground: "hsl(var(--background))",
-          colorInputBackground: "hsl(var(--input))",
-          colorInputText: "hsl(var(--foreground))",
-          colorText: "hsl(var(--foreground))",
-          colorTextSecondary: "hsl(var(--muted-foreground))",
+          colorPrimary: "var(--primary)",
+          colorBackground: "var(--background)",
+          colorInputBackground: "var(--input)",
+          colorInputText: "var(--foreground)",
+          colorText: "var(--foreground)",
+          colorTextSecondary: "var(--muted-foreground)",
           borderRadius: "var(--radius)",
         },
       }}
