@@ -48,6 +48,7 @@ This document provides comprehensive coding standards and guidelines for LLM age
 - ❌ Skip reading the documentation files
 - ❌ Skim or partially read the docs
 - ❌ Write code first and check docs later
+- ❌ Create or use `middleware.ts` file (deprecated - use `proxy.ts` instead)
 
 ### ✅ ALWAYS DO THIS:
 - ✅ Read the COMPLETE relevant documentation file BEFORE writing ANY code
@@ -236,6 +237,15 @@ Do NOT proceed to step 1 until you have:
 - `db/` - Database schemas and client
 - `lib/` - Utility functions
 - `doc/` - Agent instructions and documentation
+
+### ⚠️ Routing & Middleware - CRITICAL
+
+**NEVER use `middleware.ts` in this project.**
+
+- The traditional `middleware.ts` file is **deprecated** in Next.js 16.1.6 (this project's version)
+- Instead, use `proxy.ts` for middleware-like functionality
+- If you need to add routing logic, authentication checks, or request interception, implement it in `proxy.ts`
+- **DO NOT create a `middleware.ts` file** - it will cause conflicts and unexpected behavior
 
 ## Getting Help
 
