@@ -120,7 +120,7 @@ export default async function Home() {
       <section className="border-t border-border bg-muted px-4 py-12">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-2">
-            Trusted by thousands
+            EMPOWER YOUR PROJECT
           </p>
           <p className="text-lg md:text-xl text-muted-foreground">
             Start shortening your links today and track every click with powerful analytics
