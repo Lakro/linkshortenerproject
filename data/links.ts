@@ -38,3 +38,12 @@ export async function updateLinkById(
     .returning()
   return link
 }
+
+export async function getLinkByShortCode(shortCode: string): Promise<Link | null> {
+  const [link] = await db
+    .select()
+    .from(links)
+    .where(eq(links.shortCode, shortCode))
+    .limit(1)
+  return link ?? null
+}
