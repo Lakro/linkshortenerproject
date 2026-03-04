@@ -123,7 +123,7 @@ export default async function Home() {
             EMPOWER YOUR PROJECT
           </p>
           <p className="text-lg md:text-xl text-muted-foreground">
-            Start shortening your links today and track every click with powerful analytics
+            Start shortening your links today
           </p>
         </div>
       </section>
