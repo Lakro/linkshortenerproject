@@ -1,3 +1,7 @@
+---
+description: Read this before implementing or modifying any authentication-related code. This file contains critical instructions for using Clerk correctly in this project.
+---
+
 # Authentication with Clerk
 
 ## ⚠️ CRITICAL: READ BEFORE CODING

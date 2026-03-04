@@ -1,23 +1,6 @@
 # Agent Instructions - Link Shortener Project
 
-## 🚨 CRITICAL - STOP AND READ THIS FIRST 🚨
 
-### ⛔ MANDATORY: READ DOCUMENTATION BEFORE ANY CODE GENERATION ⛔
-
-**YOU MUST READ THE RELEVANT DOCUMENTATION FILES IN `/doc/` BEFORE WRITING OR UPDATING ANY CODE.**
-
-**THIS IS A BLOCKING REQUIREMENT. FAILURE TO COMPLY WILL RESULT IN INCORRECT CODE.**
-
-### ⚠️ IMPORTANT RULES:
-1. ✋ **STOP** - Do NOT write code immediately
-2. 📖 **READ** - Read the ENTIRE relevant documentation file in `/doc/`
-3. 🧠 **UNDERSTAND** - Comprehend the patterns and rules
-4. ✅ **THEN** - Write code following those exact patterns
-
-**DO NOT SKIP READING THE DOCS.**  
-**DO NOT ASSUME YOU KNOW THE PATTERNS.**  
-**DO NOT GENERATE CODE BASED ON GENERAL KNOWLEDGE.**  
-**ALWAYS READ THE PROJECT-SPECIFIC INSTRUCTIONS FIRST.**
 
 ## Overview
 This document provides comprehensive coding standards and guidelines for LLM agents working on this Link Shortener project. These instructions ensure consistent, high-quality code that follows industry best practices.
@@ -38,7 +21,7 @@ This document provides comprehensive coding standards and guidelines for LLM age
 **Before writing ANY code, you MUST:**
 
 1. **IDENTIFY** - Determine which aspect of the project you're working on (auth, UI, database, etc.)
-2. **READ** - Open and read the ENTIRE relevant documentation file in `/doc/`
+2. **READ** - Open and read the ENTIRE relevant documentation file(s)
 3. **UNDERSTAND** - Study the patterns, examples, and rules completely
 4. **IMPLEMENT** - ONLY THEN write code following those exact patterns
 
@@ -55,27 +38,6 @@ This document provides comprehensive coding standards and guidelines for LLM age
 - ✅ Follow the exact patterns shown in the documentation
 - ✅ Reference the examples in the docs
 - ✅ Verify your code matches the documented patterns
-
----
-
-### 📚 Available Documentation Files
-
-All detailed agent instructions are organized in the `/doc` directory. Each file contains specific guidelines and examples:
-
-- **[01-AUTHENTICATION.md](doc/01-AUTHENTICATION.md)** - Clerk authentication, route protection, and user management  
-  → **MUST READ BEFORE** any auth code, protected routes, or user management
-  
-- **[02-UI-COMPONENTS.md](doc/02-UI-COMPONENTS.md)** - shadcn/ui components, forms, tables, cards, and layouts  
-  → **MUST READ BEFORE** any UI components, forms, or styling code
-
----
-
-### 🎯 How to Determine Which File to Read
-
-**Working on Authentication/Users?** → Read `01-AUTHENTICATION.md`  
-**Working on UI/Components/Forms?** → Read `02-UI-COMPONENTS.md`  
-**Working on Database?** → Read database documentation (when available)  
-**Not sure?** → Read ALL relevant files, better safe than sorry!
 
 
 ## Quick Reference
@@ -191,7 +153,7 @@ export async function createLink(formData: FormData) {
 ## When Building Features
 
 ### ⚠️ STEP 0: READ THE DOCUMENTATION FIRST
-**Before doing ANY of the steps below, READ the relevant `/doc/` files!**
+**Before doing ANY of the steps below, READ the relevant Instruction files!**
 
 Do NOT proceed to step 1 until you have:
 - ✅ Identified which documentation files are relevant
@@ -259,7 +221,7 @@ Do NOT proceed to step 1 until you have:
 
 Use this checklist when implementing new features:
 
-- [ ] **🔴 READ RELEVANT DOCUMENTATION in `/doc/` FIRST** (BLOCKING - DO NOT PROCEED WITHOUT THIS)
+- [ ] **🔴 READ RELEVANT DOCUMENTATION in Instruction Files FIRST** (BLOCKING - DO NOT PROCEED WITHOUT THIS)
 - [ ] Feature planned according to architecture guidelines
 - [ ] TypeScript types defined (no `any` types)
 - [ ] Server/Client components chosen appropriately
@@ -279,11 +241,11 @@ Use this checklist when implementing new features:
 
 ## Remember
 
-> **📖 READ DOCS FIRST - ALWAYS**: Before writing ANY code, read the complete relevant documentation file in `/doc/`. This is not optional. This is not negotiable. This is MANDATORY.
+> **📖 READ DOCS FIRST - ALWAYS**: Before writing ANY code, read the complete relevant documentation file. This is not optional. This is not negotiable. This is MANDATORY.
 
 > **Quality over Speed**: Take time to write clean, maintainable, type-safe code that follows these guidelines. Future developers (and future you) will thank you.
 
-> **When in Doubt**: Refer to the detailed documentation in `/doc/` directory. Each file contains comprehensive examples and best practices. When you're certain, still refer to them to confirm.
+> **When in Doubt**: Refer to the detailed documentation in the relevant instruction file. Each file contains comprehensive examples and best practices. When you're certain, still refer to them to confirm.
 
 > **Consistency is Key**: Follow existing patterns in the codebase. When adding new patterns, document them for others.
 
@@ -293,9 +255,9 @@ Use this checklist when implementing new features:
 
 **If you take away ONE thing from this document, let it be this:**
 
-### NEVER GENERATE CODE WITHOUT READING THE RELEVANT `/doc/` FILES FIRST
+### NEVER GENERATE CODE WITHOUT READING THE RELEVANT INSTRUCTION FILES FIRST
 
-The documentation files contain:
+The instruction files contain:
 - ✅ Project-specific patterns and conventions
 - ✅ Exact code examples to follow
 - ✅ Common pitfalls to avoid
@@ -303,7 +265,6 @@ The documentation files contain:
 
 **Your general knowledge of Next.js, React, or TypeScript is NOT enough.**  
 **This project has SPECIFIC patterns that you MUST follow.**  
-**Those patterns are documented in `/doc/`.**  
 **READ THEM FIRST. EVERY TIME.**
 
 ---

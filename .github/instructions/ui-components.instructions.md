@@ -1,3 +1,8 @@
+---
+description: Read this before implementing or modifying any UI-related code. This file contains critical instructions for using shadcn/ui components correctly in this project.
+---
+
+
 # UI Components with shadcn/ui
 
 ## Overview
