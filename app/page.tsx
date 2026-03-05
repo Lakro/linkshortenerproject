@@ -1,16 +1,22 @@
-import { auth } from '@clerk/nextjs/server'
-import { redirect } from 'next/navigation'
-import { SignUpButton } from '@clerk/nextjs'
-import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Link2, BarChart3, Shield, Zap } from 'lucide-react'
+import { auth } from "@clerk/nextjs/server";
+import { redirect } from "next/navigation";
+import { SignUpButton } from "@clerk/nextjs";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Link2, BarChart3, Shield, Zap } from "lucide-react";
 
 export default async function Home() {
-  const { userId } = await auth()
-  
+  const { userId } = await auth();
+
   // If user is logged in, redirect to dashboard
   if (userId) {
-    redirect('/dashboard')
+    redirect("/dashboard");
   }
 
   return (
@@ -20,19 +26,22 @@ export default async function Home() {
         <div className="mx-auto max-w-6xl text-center">
           <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-border bg-muted px-4 py-1.5">
             <Zap className="h-4 w-4 text-primary" />
-            <span className="text-sm font-medium">Fast, Secure, and Reliable</span>
+            <span className="text-sm font-medium">
+              Fast, Secure, and Reliable
+            </span>
           </div>
-          
+
           <h1 className="mb-6 text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
             Shorten Links.
             <br />
             <span className="text-primary">Track Everything.</span>
           </h1>
-          
+
           <p className="mx-auto mb-8 max-w-2xl text-lg text-muted-foreground md:text-xl">
-            Create short, memorable links in seconds. Track clicks, manage your URLs, and get insights—all in one powerful platform.
+            Create short, memorable links in seconds. Track clicks, manage your
+            URLs, and get insights—all in one powerful platform.
           </p>
-          
+
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <SignUpButton mode="modal">
               <Button size="lg" className="w-full sm:w-auto">
@@ -52,7 +61,8 @@ export default async function Home() {
               Everything you need to manage links
             </h2>
             <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-              Powerful features designed to make link management simple and effective.
+              Powerful features designed to make link management simple and
+              effective.
             </p>
           </div>
 
@@ -65,7 +75,8 @@ export default async function Home() {
                 </div>
                 <CardTitle>Quick Link Shortening</CardTitle>
                 <CardDescription>
-                  Transform long URLs into short, shareable links instantly with just a few clicks.
+                  Transform long URLs into short, shareable links instantly with
+                  just a few clicks.
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -78,7 +89,8 @@ export default async function Home() {
                 </div>
                 <CardTitle>Analytics & Tracking</CardTitle>
                 <CardDescription>
-                  Track clicks, monitor performance, and gain valuable insights into how your links are performing.
+                  Track clicks, monitor performance, and gain valuable insights
+                  into how your links are performing.
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -91,7 +103,8 @@ export default async function Home() {
                 </div>
                 <CardTitle>Secure & Reliable</CardTitle>
                 <CardDescription>
-                  Your links are protected with enterprise-grade security and backed by reliable infrastructure.
+                  Your links are protected with enterprise-grade security and
+                  backed by reliable infrastructure.
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -106,12 +119,10 @@ export default async function Home() {
             Ready to get started?
           </h2>
           <p className="mb-8 text-lg text-muted-foreground">
-            Join thousands of users who trust our platform to manage their links.
+            Manage your links for more intuitive communication accross the web.
           </p>
           <SignUpButton mode="modal">
-            <Button size="lg">
-              Create Your Account
-            </Button>
+            <Button size="lg">Create Your Account</Button>
           </SignUpButton>
         </div>
       </section>
